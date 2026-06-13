@@ -1,7 +1,5 @@
-import type { ApiUrlInterface } from "./ApiUrlInterface";
 
-
-export interface SearchByTextOrLetterInterface extends ApiUrlInterface {
+export interface SearchByTextOrLetterInterface {
     data: {
         param: 's' | 'f',
         value: string

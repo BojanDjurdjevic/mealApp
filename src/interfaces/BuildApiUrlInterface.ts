@@ -1,6 +1,4 @@
-import type { ApiUrlInterface } from "./ApiUrlInterface";
 
-
-export interface BuildApiUrlInterface extends ApiUrlInterface {
+export interface BuildApiUrlInterface {
     data: {param: string, value: string}
 }
