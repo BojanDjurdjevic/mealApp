@@ -1,6 +1,7 @@
 import { hookSelectEvents } from "./events/selectEvents";
 import { fillSelectWithOptions } from "./helpers/htmlSelectHelper";
-import { getMealById, getMealCategories } from "./services/mealDbService";
+import { showMeals } from "./helpers/showMealHelper";
+import { getMealById, getMealCategories, getRandomMeals } from "./services/mealDbService";
 
 /*
 const x = getMealById({
@@ -32,6 +33,12 @@ async function main() {
     fillSelectWithOptions("categories", categories)
     fillSelectWithOptions("ingredients", ingredients)
     fillSelectWithOptions("aerea", aerea)
+
+    const randomMeals = await getRandomMeals(3)
+
+    console.log(randomMeals)
+    
+    showMeals('mealHolder', randomMeals)
 }
 
 main()
